@@ -1,1 +1,1 @@
-# Higer-Order-Functions
+# Higher-Order-Functions
