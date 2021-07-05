@@ -15,7 +15,8 @@ function customForEach(fn) {
 
 Array.prototype.customForEach = customForEach;
 
-[1, 2, 3].customForEach((item, index) => console.log(item, index));
+[1, 2, 3].customForEach((item) => console.log(item));
+// Output: 1 2 3
 
 
 // map
@@ -35,6 +36,7 @@ Array.prototype.customMap = customMap;
 [1, 2, 3].customMap(function (item) {
     return item * 10;
 });
+// Output: [10, 20, 30]
 
 
 // filter
@@ -55,6 +57,7 @@ Array.prototype.customFilter = customFilter;
 [1, 2, 3].customFilter(function (item) {
     return item > 1;
 });
+// Output: [2, 3]
 
 
 // reduce
@@ -75,9 +78,9 @@ function customReduce(fn, init) {
 Array.prototype.customReduce = customReduce;
 
 [1, 2, 3].customReduce(function (sum, elem) {
-    console.log(elem);
     return sum * elem;
 }, 2);
+// Output: 12
 
 
 // every
@@ -101,6 +104,7 @@ Array.prototype.customEvery = customEvery;
 [1, 2, 3].customEvery(function (item) {
     return item > 1;
 });
+// Output: false
 
 
 // some
@@ -122,6 +126,7 @@ Array.prototype.customSome = customSome;
 [1, 2, 3].customSome(function (item) {
     return item > 1;
 });
+// Output: true
 
 
 // find
@@ -140,9 +145,10 @@ function customeFind(fn) {
 
 Array.prototype.customeFind = customeFind;
 
-[1, 2, 3].customeFind(function (item) {
-    return item > 1;
+[10, 20, 30].customeFind(function (item) {
+    return item > 10;
 });
+// Output: 20
 
 
 // findIndex
@@ -161,6 +167,7 @@ function customeFindIndex(fn) {
 
 Array.prototype.customeFindIndex = customeFindIndex;
 
-[1, 2, 3].customeFindIndex(function (item) {
-    return item > 1;
+[10, 20, 30].customeFindIndex(function (item) {
+    return item > 10;
 });
+// Output: 1
